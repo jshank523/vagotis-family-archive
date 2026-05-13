@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function PasswordGate() {
@@ -8,22 +8,18 @@ export default function PasswordGate() {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const FAMILY_PASSWORD = "0228";
-
-  useEffect(() => {
-    const access = sessionStorage.getItem("family-access");
-
-    if (access && Date.now() < Number(access)) {
-      router.push("/home");
-    }
-  }, [router]);
-
-  function handleLogin(e: React.FormEvent) {
+  async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
 
-    if (password === FAMILY_PASSWORD) {
-      const expiresAt = Date.now() + 5 * 60 * 1000;
-      sessionStorage.setItem("family-access", String(expiresAt));
+    const response = await fetch("/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ password }),
+    });
+
+    if (response.ok) {
       router.push("/home");
     } else {
       setError("Incorrect password. Please try again.");

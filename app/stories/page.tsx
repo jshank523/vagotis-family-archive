@@ -1,23 +1,26 @@
+"use client";
+
+import { useState } from "react";
 const stories = [
   {
     id: 1,
-    title: "A Family Memory",
-    person: "Related person",
-    year: "Year ____",
-    location: "Location ____",
-    category: "Memory",
+    title: "Yiayia vs. the Oxygen Tank",
+    person: "Esther Vagotis (Yiayia)",
+    year: "Late 1990s",
+    location: "Nursing Home",
+    category: "Funny Memory",
     excerpt:
-      "Write a short preview of the story here. This could be a memory, milestone, family tradition, or important moment.",
+      "While living in the nursing home and hooked up to oxygen, Yiayia casually decided it was still a good time to light up a cigarette. As everyone panicked over the obvious danger of mixing oxygen and cigarettes, she remained completely unbothered—because nobody was going to tell Esther Vagotis she couldn’t smoke.",
   },
   {
     id: 2,
-    title: "How We Got Here",
-    person: "Related person",
-    year: "Year ____",
-    location: "Location ____",
-    category: "History",
+    title: "Winston and the Easter Lamb Heist",
+    person: "George Vagotis & Winston",
+    year: "Family Easter",
+    location: "Family Easter Celebration",
+    category: "Holiday Chaos",
     excerpt:
-      "Use this space for migration stories, childhood memories, holidays, or stories passed down through generations.",
+      "During Easter dinner, Winston the dog saw his opportunity and made a bold move—stealing the lamb right off the table. George Vagotis immediately erupted into loud Greek cursing while everyone else tried not to laugh. Winston, of course, had no regrets and considered it his greatest achievement.",
   },
   {
     id: 3,
@@ -32,6 +35,9 @@ const stories = [
 ];
 
 export default function StoriesPage() {
+  const [openStory, setOpenStory] = useState<(typeof stories)[0] | null>(null);
+
+
   return (
     <main className="min-h-screen bg-[#f7f2ea] px-6 py-12 text-stone-950">
       <section className="mx-auto max-w-7xl">
@@ -122,14 +128,47 @@ export default function StoriesPage() {
                   {story.excerpt}
                 </p>
 
-                <button className="mt-7 rounded-2xl border border-stone-300 px-5 py-3 text-sm font-semibold transition group-hover:border-stone-950 group-hover:bg-stone-950 group-hover:text-white">
-                  Read Story →
-                </button>
+                <button
+  onClick={() => setOpenStory(story)}
+  className="mt-7 rounded-2xl border border-stone-300 px-5 py-3 text-sm font-semibold transition group-hover:border-stone-950 group-hover:bg-stone-950 group-hover:text-white"
+>
+  Read Story →
+</button>
               </div>
             </article>
           ))}
         </div>
       </section>
+      {openStory && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-6">
+    <div className="max-w-2xl rounded-[2rem] bg-white p-8 shadow-2xl">
+      <p className="text-sm font-bold uppercase tracking-[0.2em] text-amber-700">
+        {openStory.category}
+      </p>
+
+      <h2 className="mt-4 text-4xl font-black">{openStory.title}</h2>
+
+      <p className="mt-3 text-sm font-medium text-stone-500">
+        {openStory.year} • {openStory.location}
+      </p>
+
+      <p className="mt-2 text-sm text-stone-500">
+        Connected to: {openStory.person}
+      </p>
+
+      <p className="mt-6 leading-8 text-stone-700">
+        {openStory.excerpt}
+      </p>
+
+      <button
+        onClick={() => setOpenStory(null)}
+        className="mt-8 rounded-2xl bg-stone-950 px-6 py-3 font-semibold text-white hover:bg-stone-700"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
     </main>
   );
 }
