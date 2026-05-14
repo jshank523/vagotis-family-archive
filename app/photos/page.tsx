@@ -10,11 +10,11 @@ const photos = [
     year: "Family Celebration",
     event: "Wedding",
     people: "Luke, Nina, Family",
-    coverImage: "/photos/luke-nina-wedding.jpg",
+    coverImage: "/images/luke-nina-wedding.jpg",
+
 images: [
-  "/photos/luke-nina-wedding.jpg",
-  "/photos/IMG_3361.jpeg",
-  "/photos/IMG_9325.jpeg",
+  "/images/luke-nina-wedding.jpg",
+  "/images/IMG_9325.jpeg",
 ],
   },
 ];
