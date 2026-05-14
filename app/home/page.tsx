@@ -163,9 +163,52 @@ export default function HomePage() {
       </section>
 
       <footer className="border-t border-white/70 px-6 py-8 text-center text-sm text-stone-500">
-        Built for the Vagotis Family — preserving generations of stories,
-        memories, and legacy.
-      </footer>
+  <p>
+    Built for the Vagotis Family — preserving generations of stories,
+    memories, and legacy.
+  </p>
+
+  <p className="mt-3">
+    Built by{" "}
+    <a
+      href="https://github.com/jshank523"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-semibold hover:underline"
+    >
+      Jacob Shankel
+    </a>
+  </p>
+
+  <div className="mt-3 flex flex-wrap items-center justify-center gap-4 text-sm">
+    <a
+      href="https://github.com/jshank523"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:underline"
+    >
+      GitHub
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/jacobvshankel/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:underline"
+    >
+      LinkedIn
+    </a>
+
+    <a
+      href="https://jacobvshankel.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:underline"
+    >
+      Portfolio
+    </a>
+  </div>
+</footer>
     </main>
   );
 }
