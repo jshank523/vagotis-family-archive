@@ -14,7 +14,7 @@ const photos = [
     description:
       "A full album capturing Luke and Nina’s wedding celebration.",
     images: [
-  "/photos/Taryn Baxter Photographer_Nina+Luke_Wedding-0513.JPG",
+  "/photos/luke-nina-wedding.jpg",
   "/photos/IMG_3361.jpeg",
   "/photos/IMG_9325.jpeg",
 ],
