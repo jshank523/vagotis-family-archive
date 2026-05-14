@@ -10,10 +10,8 @@ const photos = [
     year: "Family Celebration",
     event: "Wedding",
     people: "Luke, Nina, Family",
-    coverImage: "/photos/Taryn Baxter Photographer_Nina+Luke_Wedding-0513.JPG",
-    description:
-      "A full album capturing Luke and Nina’s wedding celebration.",
-    images: [
+    coverImage: "/photos/luke-nina-wedding.jpg",
+images: [
   "/photos/luke-nina-wedding.jpg",
   "/photos/IMG_3361.jpeg",
   "/photos/IMG_9325.jpeg",

@@ -46,11 +46,10 @@ export default function HomePage() {
           <div className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/50 p-3 shadow-2xl backdrop-blur">
             <div className="flex h-[340px] items-center justify-center overflow-hidden rounded-[1.5rem] bg-stone-900 md:h-[400px]">
               <img
-                src="/photos/vagotis-hero.jpg"
-                alt="Vagotis family archive hero"
-                className="h-full w-full object-cover object-center select-none"
-draggable="false"
-              />
+  src="/vagotis-hero.jpg"
+  alt="Vagotis family archive hero"
+  className="h-full w-full object-cover"
+/>
             </div>
           </div>
 
