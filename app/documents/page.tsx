@@ -195,6 +195,57 @@ const documents = [
   description:
     "Official death certificate for Esther Tzortzakis Vagotis.",
 },
+{
+  id: 17,
+  title: "Greek Naturalization Certificates",
+  type: "Immigration Record",
+  category: "Military Records",
+  person: "Angelina Vagotis • George Vagotis",
+  year: "1936–1938",
+  image: "/documents/greek-naturalization-certificates.pdf",
+  link: "/documents/greek-naturalization-certificates.pdf",
+  description:
+    "Official U.S. naturalization certificates for Angelina Vagotis and George Vagotis from Stark County, Ohio, documenting their immigration from Greece and citizenship records.", 
+},
+
+{
+  id: 18,
+  title: "Ellis Island Wall of Honor + Esther Birth Record",
+  type: "Immigration + Birth Record",
+  category: "Birth & Death Records",
+  person: "Vasiliki Spiropoulou Tzortzakakis • Anastasia Tzortzakis",
+  year: "1924",
+  image: "/documents/ellis-island-esther-records.pdf",
+  link: "/documents/ellis-island-esther-records.pdf",
+  description:
+    "Includes the Ellis Island Wall of Honor certificate for Vasiliki Spiropoulou Tzortzakakis and the Ohio birth certificate for Anastasia Tzortzakis.", 
+},
+
+{
+  id: 19,
+  title: "Tzortzakis Family Burial Maps + Cemetery Records",
+  type: "Family Tree + Burial Records",
+  category: "Family Trees",
+  person: "Tzortzakis Family",
+  year: "Family Memorial Records",
+  image: "/documents/tzortzakis-burial-records.pdf",
+  link: "/documents/tzortzakis-burial-records.pdf",
+  description:
+    "Family burial locations, cemetery section maps, gravestone photos, and records for George Vagotis, Angelo (Jack) Vagotis, and the extended Tzortzakis family.", 
+},
+
+{
+  id: 20,
+  title: "Angela Vagotis Feature Article",
+  type: "Newspaper Article",
+  category: "Newspaper Articles",
+  person: "Angela Vagotis",
+  year: "June 2, 1996",
+  image: "/documents/angela-feature-article.pdf",
+  link: "/documents/angela-feature-article.pdf",
+  description:
+    "A featured newspaper article from The Repository highlighting Angela Vagotis and her career journey, titled 'Change, of course.'", 
+},
 ];
 
 export default function DocumentsPage() {
