@@ -168,24 +168,14 @@ export default function HomePage() {
     memories, and legacy.
   </p>
 
-  <p className="mt-3">
-    Built by{" "}
+  <div className="mt-3 flex flex-wrap items-center justify-center gap-4 text-sm">
+    <span>Built by Jacob Shankel</span>
+
     <a
       href="https://github.com/jshank523"
       target="_blank"
       rel="noopener noreferrer"
       className="font-semibold hover:underline"
-    >
-      Jacob Shankel
-    </a>
-  </p>
-
-  <div className="mt-3 flex flex-wrap items-center justify-center gap-4 text-sm">
-    <a
-      href="https://github.com/jshank523"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:underline"
     >
       GitHub
     </a>
@@ -194,7 +184,7 @@ export default function HomePage() {
       href="https://www.linkedin.com/in/jacobvshankel/"
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:underline"
+      className="font-semibold hover:underline"
     >
       LinkedIn
     </a>
@@ -203,7 +193,7 @@ export default function HomePage() {
       href="https://jacobvshankel.com/"
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:underline"
+      className="font-semibold hover:underline"
     >
       Portfolio
     </a>
