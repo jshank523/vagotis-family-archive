@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const featuredStats = [
   ["3+", "Generations"],
   ["∞", "Memories to preserve"],
@@ -22,9 +24,9 @@ export default function HomePage() {
 
         <div className="relative mx-auto max-w-7xl">
           <nav className="mb-10 flex items-center justify-between rounded-full border border-white/70 bg-white/70 px-6 py-4 shadow-sm backdrop-blur">
-            <a href="/" className="text-lg font-bold">
+            <Link href="/" className="text-lg font-bold">
               Vagotis Family Archive
-            </a>
+            </Link>
 
             <div className="hidden gap-6 text-sm font-medium text-stone-700 md:flex">
               <a href="/family-tree" className="hover:text-stone-950">Tree</a>
@@ -157,6 +159,12 @@ export default function HomePage() {
               >
                 Share a Memory
               </a>
+                <Link
+                  href="/memories"
+                  className="mt-4 block w-fit font-semibold text-amber-200 underline underline-offset-4 hover:text-white"
+                >
+                  Read family contributions
+                </Link>
             </div>
           </div>
         </div>
