@@ -41,7 +41,7 @@ export default async function MemoriesPage() {
         <div className="mt-8 space-y-6">
           {listings.map((memory) => (
             <article id={memory.id} key={memory.id} className="scroll-mt-6 break-words rounded-3xl bg-white p-6 shadow-sm md:p-8">
-              <p className="text-sm font-bold text-amber-800">{memory.type}</p>
+              <p className="text-sm font-bold text-amber-800">Family contribution · {memory.type}</p>
               <h2 className="mt-2 text-3xl font-black">{memory.title}</h2>
               <p className="mt-2 text-sm text-stone-600">Shared by {memory.name}</p>
               <p className="mt-5 whitespace-pre-wrap leading-7">{memory.memory}</p>
